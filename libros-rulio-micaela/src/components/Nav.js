@@ -1,3 +1,5 @@
+import CartWidget from "./CartWidget";
+
 const Nav = () => {
     return (
         <nav>
@@ -7,6 +9,7 @@ const Nav = () => {
                 <li><a href = "#recomendaciones">Recomendaciones</a></li>
                 <li><a href = "#pago">Medios de Pago</a></li>
                 <li><a href = "#contacto">Contacto</a></li>
+                <CartWidget/>
             </ul>
         </nav>
     );

@@ -1,4 +1,19 @@
-body{
-    background-color: aqua;
-    width: 100 px;
+main{
+    width: 100%;
+}
+.secciones{
+    height: 200px;
+}
+
+#ingreso {
+        border-style: dashed;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;      
+}
+
+p{
+    padding: 15px;
 }
