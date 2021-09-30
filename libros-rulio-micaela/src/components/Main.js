@@ -1,10 +1,13 @@
 
+
 const Main = () => {
     return  (
             <main>
                 <div id = "bienvenida" className = "secciones"></div>
                 <hr></hr>
-                <div id = "prod" className = "secciones">Productos</div>
+                <div id = "prod" className = "secciones">
+                    <h3>Productos</h3>
+                </div>
                 <hr></hr>
                 <div id = "recomendaciones" className = "secciones">Recomendaciones</div>
                 <hr></hr>
