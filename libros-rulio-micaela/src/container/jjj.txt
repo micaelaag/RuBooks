@@ -1,0 +1,18 @@
+<div className = "contLibros">
+                        <h3>{titulo}</h3>
+                        <img src = {img}></img>
+                        <p>{autor}</p>
+                        <p>{descripcion}</p>
+                    </div>
+                    <div className = "contLibros">
+                        <h3>{titulo2}</h3>
+                        <img src = {img2}></img>
+                        <p>{autor2}</p>
+                        <p>{descripcion2}</p>
+                    </div>
+                    <div className = "contLibros">
+                        <h3>{titulo3}</h3>
+                        <img src = {img3}></img>
+                        <p>{autor3}</p>
+                        <p>{descripcion3}</p>
+                    </div>

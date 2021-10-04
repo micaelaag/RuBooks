@@ -24,12 +24,26 @@ p{
     justify-content: center;
     align-items: center;
     border-style: double;
+    width: 200px;
+
 }
 
 #contenedorLibros{
     margin-top: 5px;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border-style: double;
+}
+
+#cont{
+    margin-top: 5px;
+    display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    border-style: double;
+    width: 100%;
+
 }
