@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Item1 = (props) => {
+const ItemDetail = (props) => {
     return (
-        <div>
-            <div className="contLibros">
+        <div id = "contDetails">
+            <div>
                 <img src={props.imgUrl}/>
                 <h3>
                     {props.titulo}
@@ -12,12 +12,11 @@ const Item1 = (props) => {
                     {props.precio}
                 </h2>
                 <p>
-                    {props.descripcion}
+                    {props.detalle}
                 </p>
-                
             </div>
         </div>
     );
 }
 
-export default Item1;
+export default ItemDetail;

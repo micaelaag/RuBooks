@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import ItemListContainer from "./container/ItemListContainer";
+import ItemDetailContainer from "./container/ItemDetailContainer";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
@@ -12,6 +13,7 @@ const App = () => {
             <>
                 <Header/>
                 <ItemListContainer nombre = {usuario} email = {correo}/>
+                <ItemDetailContainer/>
                 <Main/>
                 <Footer/>
             </>
