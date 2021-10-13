@@ -1,10 +1,11 @@
 import Nav from "./Nav";
+import {Link} from "react-router-dom";
 
 
 const Header = () => {
     return (
         <header>
-            <div>LOGO RuBooks</div>
+            <Link to ="/">LOGO RuBooks</Link>
             <Nav/>
         </header>
     );

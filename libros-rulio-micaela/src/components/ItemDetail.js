@@ -1,22 +1,25 @@
 import React from 'react';
 
-const ItemDetail = (props) => {
+
+const ItemDetail = ({info}) => {
     return (
         <div id = "contDetails">
             <div>
-                <img src={props.imgUrl}/>
+                <img src={info.url}/>
                 <h3>
-                    {props.titulo}
+                    {info.titulo}
                 </h3>
                 <h2>
-                    {props.precio}
+                    {info.precio}
                 </h2>
                 <p>
-                    {props.detalle}
+                    {info.detalle}
                 </p>
             </div>
+
         </div>
     );
 }
 
 export default ItemDetail;
+

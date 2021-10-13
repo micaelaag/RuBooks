@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+
 
 const Item1 = (props) => {
     return (
@@ -14,8 +16,9 @@ const Item1 = (props) => {
                 <p>
                     {props.descripcion}
                 </p>
-                
             </div>
+            <Link to ={"/detalles/"+ props.id}>Ver detalle de producto</Link>
+
         </div>
     );
 }

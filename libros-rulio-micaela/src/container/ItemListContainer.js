@@ -1,37 +1,8 @@
 import ItemList from "../components/ItemList";
+import ItemCount from "../components/ItemCount";
 import React, {useState,useEffect} from 'react';
-
-
-
-
-const productos = 
-        [
-        {
-            id:1,
-            titulo: "Orgullo y prejuicio",
-            precio: "$ 2000",
-            url:"./imagenes/orgullo.jpg",
-            autor: "Jane Austin",
-            descripcion: "....."
-        },
-        {
-            id:2,
-            titulo: "Jane Eyre",
-            precio: "$ 1500",
-            url:"./imagenes/jane.jpg",
-            autor: "Charlote Bonte",
-            descripcion: "....."
-        },
-        {
-            id:3,
-            titulo: "Dracula",
-            precio: "$ 1000",
-            url:"./imagenes/dracula.jpg",
-            autor: "Bram Stoker",
-            descripcion: "....."
-        },
-        
-    ];
+import {useParams} from "react-router-dom";
+import {productos} from "../../src/components/productos";
 
 
 function comprobarError(){
@@ -81,17 +52,21 @@ const ItemListContainer = (props) => {
             }
         )
     }, []);
+    console.log(props)
     
+    console.log("me ejcute una vez")
+    const resultado = useParams();
+    console.log(resultado)
     
     return  (
             <div>
                 <div id = "ingreso">
                     <p>Bienvenido/a</p>
-                    <p>Nombre: {props.nombre}</p>
-                    <p>Email: {props.email}</p>
+                    
                 </div>
                 <div className = "contenedorLibros">
-                    <ItemList info = {items}/>                    
+                    <ItemList info = {items}/>             
+                    <ItemCount/>     
                 </div>
             </div>
 );

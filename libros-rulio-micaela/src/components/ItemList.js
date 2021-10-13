@@ -11,6 +11,7 @@ function ItemList({info}) {
                 info.map( (itm,index) =>
                     <Item1
                         key={index}
+                        id={itm.id}
                         titulo={itm.titulo}
                         autor={itm.autor}
                         precio={itm.precio}
