@@ -2,6 +2,7 @@ import React from 'react'
 import Item1 from "./Item1";
 
 function ItemList({info}) {
+
     return (
         <div id = "contenedorLibros">
             <hr/>         

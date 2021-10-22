@@ -1,15 +1,37 @@
-import React, { useState } from 'react'
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-function ItemCount() {
-    const [count, setCount] = useState(0);
+const ItemCount = ({stock,initial = 1,onAdd}) => {
 
-    return (
-    <div>
-        <p>{count}</p>
-        <button onClick={()=> {setCount(count + 1)}}>+</button>
-        <button onClick={count>0 ? ()=> {setCount(count - 1)} : null}>-</button>
-    </div>
-)
+    const [count, setCount] = useState(initial);
+
+    const increment = () => {
+        if(count < stock) {
+            setCount(count + 1);
+        }
+    }
+
+    const decrement = () => {
+        if (count > 0)
+        setCount(count - 1);
+    }
+
+    const confirm = () => {
+        onAdd(count)
+    }
+
+    return ( 
+        <div>
+
+            <p>Cantidad: {count}</p>
+            <button onClick={increment}>+</button>
+            <button onClick={decrement}>-</button>
+            
+            <Link to={"/carrito"}><button onClick={confirm}>Confirmar cantidad</button></Link>
+        </div>
+    );
 }
 
-export default ItemCount
+export default ItemCount; 
+
+

@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {useContext } from 'react';
+import ItemCount from "./ItemCount";
+import { CartContext } from "../CartContext"
+
 
 
 const ItemDetail = ({info}) => {
+    const {agregar} = useContext(CartContext)
+
+    const onAdd = (cantidad) => {
+        agregar(info,cantidad)
+    }
     return (
         <div id = "contDetails">
             <div>
@@ -16,10 +24,12 @@ const ItemDetail = ({info}) => {
                     {info.detalle}
                 </p>
             </div>
-
+            <p>Stock restante : {info.stock}</p>
+            <ItemCount stock={info.stock} onAdd={onAdd} />
         </div>
     );
 }
 
 export default ItemDetail;
+
 
