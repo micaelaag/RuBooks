@@ -16,8 +16,7 @@ function ItemList({info}) {
                         titulo={itm.titulo}
                         autor={itm.autor}
                         precio={itm.precio}
-                        imgUrl={itm.url}
-                        descripcion = {itm.descripcion}
+                        imgUrl={itm.img}
                     />
             )}        
             </div>           

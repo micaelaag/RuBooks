@@ -1,5 +1,5 @@
 import React from "react"
-import jane from "../imagenes/jane.jpg";
+import jane from "../imagenes/jane.jpg"
 import orgullo from "../imagenes/orgullo.jpg";
 import dracula from "../imagenes/dracula.jpg";
 
