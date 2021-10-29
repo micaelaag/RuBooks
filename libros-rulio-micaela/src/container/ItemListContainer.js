@@ -38,11 +38,8 @@ const obtenerCategoria = () =>{
     const query = collection.where("idCategoria","==", idCategoria).get();
     
     query.then((resultado)=>{
-
-        if (resultado.size == 0){
-            console.log("No hay productos")
-        } else{
             const documentos = resultado.docs
+            console.log(documentos)
             const array_final_de_productos = []
             documentos.forEach(producto=>{
                 const id = producto.id
@@ -51,10 +48,10 @@ const obtenerCategoria = () =>{
 
                 console.log(producto_final)
                 array_final_de_productos.push(producto_final)
+                setItems(array_final_de_productos)
+                console.log(array_final_de_productos)
             });
-            setItems(array_final_de_productos)
-            console.log(array_final_de_productos)
-        }
+        
             })
     .catch(error=>{
         console.log(error)
@@ -62,7 +59,6 @@ const obtenerCategoria = () =>{
 
     
 }
-
 
 
     useEffect(() => {
