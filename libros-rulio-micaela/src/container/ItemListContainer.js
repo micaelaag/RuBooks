@@ -48,9 +48,15 @@ const obtenerCategoria = () =>{
 
                 console.log(producto_final)
                 array_final_de_productos.push(producto_final)
+<<<<<<< HEAD
                 console.log(array_final_de_productos)
             });
             setItems(array_final_de_productos)
+=======
+                setItems(array_final_de_productos)
+                console.log(array_final_de_productos)
+            });
+>>>>>>> 19ccbaf7cd6454bd654e8a8d8c883d729acbb3f6
         
             })
     .catch(error=>{
@@ -59,7 +65,6 @@ const obtenerCategoria = () =>{
 
     
 }
-
 
 
     useEffect(() => {
