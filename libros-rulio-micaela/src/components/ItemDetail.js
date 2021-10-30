@@ -13,7 +13,7 @@ const ItemDetail = ({info}) => {
     return (
         <div id = "contDetails">
             <div>
-                <img src={info.url}/>
+                <img src={info.img}/>
                 <h3>
                     {info.titulo}
                 </h3>
@@ -24,7 +24,7 @@ const ItemDetail = ({info}) => {
                     {info.detalle}
                 </p>
             </div>
-            <p>Stock restante : {info.stock}</p>
+            <p>Stock restante: {info.stock}</p>
             <ItemCount stock={info.stock} onAdd={onAdd} />
         </div>
     );

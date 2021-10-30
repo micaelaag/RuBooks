@@ -11,7 +11,7 @@ export const CartProvider = (props)=>{
     function agregar(prod,cantidad){
         const prodSeleccionado = {
             "id": prod.id,
-            "img":prod.url,
+            "img":prod.img,
             "precio":prod.precio,
             "titulo": prod.titulo,
             "cantidad": cantidad

@@ -14,7 +14,7 @@ function Carrito() {
                 {carrito.map((item, index)=>{
                     return(
                         <ul key={index}>
-                            <img src={item.url}/>
+                            <img src={item.img}/>
                             <li>{item.titulo}</li>
                             <li>{item.precio}</li>
                             <button onClick={()=>{eliminarProducto(index)}}>X</button>

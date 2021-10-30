@@ -10,7 +10,7 @@ const ItemListContainer = () => {
 
     const [items,setItems] = useState([]);
     const {idCategoria} = useParams()
-    
+    console.log(idCategoria)
 const obtenerProductos = () => {
     const db = firestore
     const collection = db.collection("productos")
@@ -35,14 +35,11 @@ query.then((resultado)=>{
 const obtenerCategoria = () =>{
     const db = firestore
     const collection = db.collection("productos")    
-    const query = collection.where("idCategoria","==", idCategoria).get();
+    const query = collection.where("idCategoria","==", Number(idCategoria)).get();
     
     query.then((resultado)=>{
-
-        if (resultado.size == 0){
-            console.log("No hay productos")
-        } else{
             const documentos = resultado.docs
+            console.log(documentos)
             const array_final_de_productos = []
             documentos.forEach(producto=>{
                 const id = producto.id
@@ -51,10 +48,10 @@ const obtenerCategoria = () =>{
 
                 console.log(producto_final)
                 array_final_de_productos.push(producto_final)
+                console.log(array_final_de_productos)
             });
             setItems(array_final_de_productos)
-            console.log(array_final_de_productos)
-        }
+        
             })
     .catch(error=>{
         console.log(error)
@@ -73,24 +70,6 @@ const obtenerCategoria = () =>{
         }
     },[idCategoria])
         
-        
-        // if(idCategoria){
-        //     const promesa = new Promise((resolve,reject) => {
-        //         setTimeout(() => {
-        //             resolve(productos.filter(producto => producto.idCategoria == idCategoria))
-        //         },2000)
-        //     })
-        //     promesa.then(productos => setItems(productos))
-        // }else{
-        //     const promesa = new Promise((resolve,reject) => {
-        //         setTimeout(() => {
-        //             resolve(productos)
-        //         },2000)
-        //     })
-        //     promesa.then(productos => {
-        //         setItems(productos)          
-        //     })
-        // }
     
     return  (
             <div>
