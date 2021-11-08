@@ -19,26 +19,30 @@ export const CartProvider = (props)=>{
 
 
         const temp = carrito;
-        temp.push(prodSeleccionado)    
-        setCarrito(temp)    
-        console.log(carrito)
-        
-        if (prodSeleccionado.id in temp){
-                const buscarProd = temp.find(producto =>producto.id == prodSeleccionado.id)
-                prodSeleccionado.cantidad = buscarProd.cantidad + prodSeleccionado.cantidad
-                temp.splice(buscarProd, 1)
-                setCarrito(temp)
-                console.log("------------------------------")
-                console.log(carrito)
-                console.log("------------------------------")
+        const buscarProd = temp.find(producto =>producto.id === prodSeleccionado.id)
+
+        console.log(buscarProd)
+
+        if (buscarProd == undefined){
+            temp.push(prodSeleccionado)
+            console.log("respuesta verdadera de busqueda en carrito")
+
+        }else{
+            prodSeleccionado.cantidad = buscarProd.cantidad + prodSeleccionado.cantidad  
+            const index = temp.findIndex(p => p.id === prodSeleccionado.id);
+            temp[index].cantidad = prodSeleccionado.cantidad            
+            console.log(prodSeleccionado)             
+            console.log("respuesta falsa de busqueda en carrito")
 
         }
         
-        
+ 
+        setCarrito(temp)
         let sumarCantidades = cantidades + cantidad
         console.log(sumarCantidades)
-        setCantidad(sumarCantidades)
+        setCantidad(sumarCantidades) 
     }   
+    
     const calcularTotal = () =>{
 
         let tot = 0
@@ -51,7 +55,6 @@ export const CartProvider = (props)=>{
     
     const eliminarProducto = (index) => {
         const temp = carrito;
-        
         const restar = temp[index] 
         let restarCantidades = cantidades - restar.cantidad
         console.log(restarCantidades)

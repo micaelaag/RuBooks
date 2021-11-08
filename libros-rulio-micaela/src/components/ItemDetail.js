@@ -13,7 +13,7 @@ const ItemDetail = ({info}) => {
     return (
         <div id = "contDetails">
             <div>
-                <img src={info.img}/>
+                <img src={info.img} height="250px"/>
                 <h3>
                     {info.titulo}
                 </h3>

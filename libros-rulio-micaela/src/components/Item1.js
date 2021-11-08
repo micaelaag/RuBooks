@@ -5,7 +5,7 @@ const Item1 = (props) => {
     return (
         <div>
             <div className="contLibros">
-                <img src={props.imgUrl}/>
+                <img src={props.imgUrl} height="200px"/>
                 <h3>
                     {props.titulo}
                 </h3>
