@@ -24,10 +24,10 @@ const ItemCount = ({stock,initial = 1,onAdd}) => {
         <div>
 
             <p>Cantidad: {count}</p>
-            <button onClick={increment}>+</button>
-            <button onClick={decrement}>-</button>
+            <button className = "agregar" onClick={increment}>+</button>
+            <button className = "agregar" onClick={decrement}>-</button>
             
-            <Link to={"/carrito"}><button onClick={confirm}>Confirmar cantidad</button></Link>
+            <Link to={"/carrito"}><button className = "agregar botones" onClick={confirm}>Confirmar cantidad</button></Link>
         </div>
     );
 }

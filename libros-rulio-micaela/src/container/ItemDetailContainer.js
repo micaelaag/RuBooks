@@ -34,7 +34,7 @@ const ItemDetailContainer = () => {
     },[id])
 
     return  (
-        <>
+        <div className="contt">
         {itemsDetalle ?
             <>
             <ItemDetail info={itemsDetalle} />
@@ -42,7 +42,7 @@ const ItemDetailContainer = () => {
             :
             <div>Cargando</div>
         }
-        </>
+        </div>
 );
 }
 

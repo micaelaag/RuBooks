@@ -72,9 +72,9 @@ const obtenerCategoria = () =>{
         
     
     return  (
-            <div>
+            <div className = "contenedor">
                 <div id = "ingreso">
-                    <p>Bienvenido/a</p>
+                    <h2>Bienvenido/a</h2>
                 </div>
                 <div className = "contenedorLibros">
                     <ItemList info = {items}/> 

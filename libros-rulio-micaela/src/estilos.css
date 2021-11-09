@@ -1,21 +1,72 @@
-main{
-    width: 100%;
+@import url('https://fonts.googleapis.com/css2?family=Hina+Mincho&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.secciones{
-    height: 200px;
+body{
+
+    font-family: 'Hina Mincho', serif;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#recomendaciones{
+    width: 60%;
+}
+h3{
+    text-align: center;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+header, footer, h1{
+    background-color: rgb(124, 187, 223);
+    height: 70%;
+    width: 100%;
+    text-align: center;  
+    
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+padding-top: 5px;
+}
+
+
 #ingreso {
-        border-style: dashed;
         width: 250px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;      
+        align-items: center;     
 }
 
 p{
     padding: 15px;
+    text-align: justify;
 }
 
 .contLibros{
@@ -23,23 +74,21 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-style: double;
-    width: 200px;
+    width: 300px;
 
 }
 
-#contenedorLibros, #contDetails{
+#contenedorLibros, #contDetails, .contdet{
     margin-top: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border-style: double;
-
 }
 
-#contDetails{
+#contDetails, .carrito{
     width: 400px;
+
 }
 #cont, #contGral{
     margin-top: 5px;
@@ -50,3 +99,69 @@ p{
     width: 100%;
 }
 
+nav ul li{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.desplegar:hover .desplegable{
+    display: inline;
+}
+
+.desplegable{
+    display: block;
+    position: absolute;
+    margin-top: 130px;
+    display: none;
+    background-color: rgb(124, 187, 223);
+
+}
+.agregar{
+    background-color: rgb(124, 187, 223);
+    border-color: white;
+    width:40px;
+    border-radius: 5px;
+    padding: 7px;
+}
+.botones{
+    width: 200px;
+    padding: 11px;
+}
+a{
+    font-weight: bolder;
+    font-size: 1.3rem;
+    white-space: pre-wrap;
+    color: #0c0c0c;
+    text-decoration: none;       
+                        }
+
+img{
+    box-shadow: 2px 2px 10px 1px #0c0c0c;
+    border-radius: 5px;
+    }
+li{
+    list-style: none;
+    position:relative;
+    padding-top: 20px;
+    width: 200px;
+    text-align:center;
+}
+footer{
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+.redes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}

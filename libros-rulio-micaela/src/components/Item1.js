@@ -10,13 +10,14 @@ const Item1 = (props) => {
                     {props.titulo}
                 </h3>
                 <h2>
-                    {props.precio}
+                    $ {props.precio}
                 </h2>
                 <p>
                     {props.autor}
                 </p>
+                
+            <Link to ={"/detalles/"+ props.id} className ="agregar botones">Ver detalle de producto</Link>
             </div>
-            <Link to ={"/detalles/"+ props.id}>Ver detalle de producto</Link>
 
         </div>
     );
