@@ -3,10 +3,12 @@ import React, {createContext,useState} from "react"
 export const CartContext = createContext();
 export const CartProvider = (props)=>{
     const [carrito, setCarrito]= useState([]);
-
     const [total,setTotal] = useState(0)
     const [cantidad,setCantidad] = useState(0)
     let cantidades = cantidad
+    const [nombre, setNombre] = useState('');
+    const [correo, setCorreo] = useState('');
+    const [arrayUsuarios, setUsuarios] = useState([]);
 
     function agregar(prod,cantidad){
         const prodSeleccionado = {
@@ -73,17 +75,24 @@ export const CartProvider = (props)=>{
         setCantidad(0)
     }
 
-const terminarCompra = () => {
-    console.log("Procesando compra")
-}
-
 const cantProductos = () =>{
     const cantProd = 0;
     carrito.map(item => item.cantidad + cantProd)
     console.log(cantProd)
 }
 
+const guardarNombre = (e) => {
+    setNombre(e.target.value);
+};
 
+    const guardarCorreo = (e) => {
+    setCorreo(e.target.value);
+};
+const guardarUsuario = ()=>{
+    let arrayUsuarios = [nombre, correo];
+    setUsuarios(arrayUsuarios)
+console.log(arrayUsuarios)
+}
 const valor_del_contexto = {
     carrito,
     cantidad,
@@ -92,8 +101,13 @@ const valor_del_contexto = {
     vaciarCarrito,
     calcularTotal,
     total,
-    terminarCompra,
-    cantProductos
+    cantProductos,
+    guardarNombre,
+    guardarCorreo,
+    guardarUsuario,
+    nombre,
+    correo,
+    arrayUsuarios
   }
     
     return (

@@ -5,13 +5,12 @@ import { Link } from 'react-router-dom';
 function Cart() {
 
     
-        const {carrito, eliminarProducto, vaciarCarrito, calcularTotal, cantidad, total} = useContext(CartContext);
+        const {carrito, eliminarProducto, vaciarCarrito, calcularTotal, cantidad, total, nombre, correo} = useContext(CartContext);
     
         useEffect(() => {
         calcularTotal()
     }, []);
-
-    return (
+        return (
             <div className="contt">
             
             { 
@@ -39,7 +38,7 @@ function Cart() {
                     )
                   }
                   ) }
-              <h3>Usted ha adquirido {cantidad} productos. Gracias por su compra</h3>
+              <h3>El usuario {nombre}, {correo} ha adquirido {cantidad} productos. Gracias por su compra</h3>
               <button className="agregar botones" onClick={vaciarCarrito}>Vaciar Carrito</button>
         </>
         }
